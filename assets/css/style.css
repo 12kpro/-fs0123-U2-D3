@@ -33,7 +33,6 @@ p{
 
 /* Header section */
 #menu li:nth-child(3) {
-    flex-grow: 1;
     order: -1;
     display: flex;
     justify-content: center;
@@ -50,6 +49,7 @@ p{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
     border-radius: 5%;
     padding: 20px;
     gap: 20px;
@@ -62,7 +62,6 @@ p{
     width: 45%;
     text-transform: capitalize;
     text-align: center;
-    vertical-align: middle;
 }
 
 
@@ -84,16 +83,28 @@ p{
     }    
 }
 @media screen and (min-width: 1024px){
-    body{
-        display: flex;
+    header{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    }
+    main{
+        margin-left: 250px;
     }
     #logo{
         order: -1;
     }
     #menu{
         flex-direction: column;
+        align-items: unset;
 
     }
+    #menu li{
+        width: unset;
+    }
+    #menu li:nth-child(3) {
+        width: unset;
+    }        
 }
 .container{
     display: flex;
